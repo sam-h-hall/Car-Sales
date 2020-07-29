@@ -8,18 +8,9 @@ export const addFeature = feature => {
   };
 };
 
-export const removeFeature = id => {
-  console.log("remove action firing")
+export const removeFeature = feature => {
   return { 
     type: REMOVE_FEATURE, 
-    payload: id
+    payload: feature
   };
 };
-
-// export const removeFeature = feature => {
-//   console.log("remove action firing")
-//   return {
-//     type: REMOVE_FEATURE,
-//     payload: feature
-//   }
-// };
