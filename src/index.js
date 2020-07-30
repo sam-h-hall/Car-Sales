@@ -4,6 +4,15 @@ import App from './App';
 
 import 'bulma/css/bulma.css';
 import './styles.scss';
+import { Provider } from "react-redux";
+import { createStore } from "redux";
+import { featureReducer } from "./reducers/featureReducer"
+
+const store = createStore(featureReducer);
 
 const rootElement = document.getElementById('root');
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>, 
+  rootElement);
